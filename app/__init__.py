@@ -12,7 +12,10 @@ login_manager.login_view = 'auth.login'
 
 def create_app():
     app = Flask(__name__)
-    app.config.from_object(DevelopmentConfig)
+    if os.environ.get('FLASK_ENV') == 'production':
+        app.config.from_object(ProductionConfig)
+    else:
+        app.config.from_object(DevelopmentConfig)
 
     csrf.init_app(app)
     db.init_app(app)
