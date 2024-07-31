@@ -1,0 +1,42 @@
+{% extends "bootstrap.html" %}
+
+{% block title %}
+Sign Up - Flask Tasklist
+{% endblock %}
+
+    {% block pagecontent %}
+    <div class="container">
+      <h1>Sign Up</h1>
+      <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+          {{ form.username.label(class="form-control-label") }}
+          {{ form.username(class="form-control") }}
+        </div>
+        <div class="form-group">
+          {{ form.email.label(class="form-control-label") }}
+          {{ form.email(class="form-control") }}
+        </div>
+        <div class="form-group">
+          {{ form.password.label(class="form-control-label") }}
+          {{ form.password(class="form-control") }}
+        </div>
+        <div class="form-group">
+          {{ form.confirm_password.label(class="form-control-label") }}
+          {{ form.confirm_password(class="form-control") }}
+        </div>
+        <div class="form-group">
+          {{ form.submit(class="btn btn-primary") }}
+        </div>
+      </form>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          <ul class="flashes">
+            {% for category, message in messages %}
+              <li class="alert alert-{{ category }}">{{ message }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+    </div>
+    {% endblock %}

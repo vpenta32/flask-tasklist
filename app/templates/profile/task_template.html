@@ -1,0 +1,31 @@
+{% if e.done %}
+<div class="container mt-5 task-done">
+    <div class="row">
+        <div class="col-md-6">
+            <p class="event-title"><strong>{{e.title}}</strong></p>
+            <p class="event-description">{{e.description}}</p>
+        </div>
+        <div class="col-md-6">
+            <form action="{{ url_for('main.delete_event', event_id=e.id) }}" method="POST" style="display:inline;">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <button type="submit" class="delete-button"><img style="height: 20px" src="https://static-00.iconduck.com/assets.00/trash-bin-icon-2048x2048-duca73jv.png"></button>
+            </form>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="container mt-5 task">
+    <div class="row">
+        <div class="col-md-6">
+            <p class="event-title"><strong>{{e.title}}</strong></p>
+            <p class="event-description">{{e.description}}</p>
+        </div>
+        <div class="col-md-6">
+            <form action="{{ url_for('main.done_event', event_id=e.id) }}" method="POST" style="display:inline;">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <button type="submit" class="done-button"><img style="height: 20px;" src="https://cdn.icon-icons.com/icons2/1238/PNG/512/checkmark_83735.png"></button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endif %}

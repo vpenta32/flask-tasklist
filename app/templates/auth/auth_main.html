@@ -1,0 +1,20 @@
+{% extends "bootstrap.html" %}
+
+{% block title %}
+Auth - Flask Tasklist
+{% endblock %}
+
+    {% block pagecontent %}
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Primo div -->
+                    <a href="{{url_for('auth.login')}}"><div class="bg-secondary text-white p-3"><h2 class="white">Do you already have an account?</h2></div></a>
+                </div>
+                <div class="col-md-6">
+                    <!-- Secondo div -->
+                    <a href="{{url_for('auth.signup')}}"><div class="bg-primary text-white p-3"><h2 class="white">You haven't an account yet?</h2></div></a>
+                </div>
+            </div>
+        </div>
+    {% endblock %}

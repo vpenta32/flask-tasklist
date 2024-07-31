@@ -1,0 +1,118 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Header and Buttons */
+.bg-primary {
+    background-color: #3498db !important;
+    border-radius: 5px;
+    text-align: center;
+}
+
+a.white {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+a.white:hover {
+    text-decoration: underline;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Features Section */
+#features {
+    width: 80%;
+    margin: 50px auto;
+    text-align: left;
+}
+
+#features h1 {
+    font-size: 2em;
+}
+
+#features ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+#features ul {
+    list-style-type: circle;
+    padding-left: 20px;
+}
+
+/* How It Works Section */
+#how_it_works {
+    width: 80%;
+    margin: 50px auto;
+    text-align: left;
+}
+
+#how_it_works h1 {
+    font-size: 2em;
+}
+
+#how_it_works ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+/* Finalities Section */
+#finalities {
+    width: 80%;
+    margin: 50px auto;
+    text-align: left;
+}
+
+#finalities h1 {
+    font-size: 2em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #features, #how_it_works, #finalities {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    ol, ul {
+        padding-left: 15px;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}

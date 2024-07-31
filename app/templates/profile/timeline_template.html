@@ -1,0 +1,22 @@
+<div class="container mt-5">
+    <div class="row timeline">
+        <div class="col-md-4 col-sm-4 timeline-item">
+            <form action="{{url_for('main.getByDate', event_date=dates[0], side='left')}}" method="POST"  style="display:inline;">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <button type="submit" class="date-button"><p>{{dates[0].strftime('%d %B')}}</p></button>
+            </form>
+        </div>
+        <div class="col-md-4 col-sm-4 timeline-item-selected">
+            <form action="{{url_for('main.getByDate', event_date=dates[1], side='null')}}" method="POST"  style="display:inline;">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <button type="submit" class="date-button"><p>{{dates[1].strftime('%d %B')}}</p></button>
+            </form>
+        </div>
+        <div class="col-md-4 col-sm-4 timeline-item">
+            <form action="{{url_for('main.getByDate', event_date=dates[2], side='right')}}" method="POST"  style="display:inline;">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <button type="submit" class="date-button"><p>{{dates[2].strftime('%d %B')}}</p></button>
+            </form>
+        </div>
+    </div>
+</div>

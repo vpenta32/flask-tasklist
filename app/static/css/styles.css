@@ -1,0 +1,101 @@
+.white{
+    color: white;
+    text-decoration: none;
+}
+
+.white:hover{
+    color: white;
+}
+
+.task{
+    width: 100%;
+    height: 200px;
+    background-color: bisque;
+}
+
+.task-done{
+    text-decoration: line-through;
+    background-color: rgba(172, 255, 47, 0.121);
+}
+
+.event-title{
+    font-size: 30px;
+}
+
+.event-description{
+    font-size: 20px;
+}
+
+.delete-button{
+    padding: 5px;
+    background-color: rgba(255, 0, 0, 0.487);
+    border: 1px solid rgba(163, 0, 0, 0.487);
+    margin-top: 15px;
+}
+
+.done-button{
+    padding: 5px;
+    background-color: rgba(0, 128, 0, 0.487);
+    border: 1px solid rgba(0, 59, 0, 0.487)
+}
+
+.timeline{
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.timeline-item{
+    border-radius: 10px;
+    display: grid;
+    margin:0;
+    place-items: center;
+}
+
+.timeline-item-selected{
+    border-bottom: 1px solid black;
+    display: grid;
+    margin:0;
+    place-items: center;
+}
+
+.date-button{
+    background-color: white;
+    border: none;
+}
+
+.add-event{
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.animated-left {
+    transform: translateX(50px);
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.animated-right {
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.animated-left.animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.animated-right.animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+ul{
+    font-size: 17px;
+}
+
+.norm{
+    font-size:medium;
+}

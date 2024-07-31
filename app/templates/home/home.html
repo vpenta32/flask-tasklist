@@ -1,0 +1,85 @@
+{% extends "bootstrap.html" %}
+
+{% block title %}
+Home - Flask Tasklist
+{% endblock %}
+
+    {% block pagecontent %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}"
+        <div class="container text-center my-5">
+            <h1>Welcome to My Flask Tasklist</h1>
+            <h5>The perfect solution to don't forget anything</h5>
+            <div class="bg-primary text-white p-3 mt-3">
+                <a class="white" href="{{ url_for('auth.index') }}"><h2>Sign Up Now!</h2></a>
+            </div>
+        </div>
+        <div id="content" class="container mt-5">
+            <section id="features" class="mb-5">
+                <h1>Here there are the main features:</h1>
+                <ol class="fs-5">
+                    <li>Secure Registration
+                        <ul>
+                            <li>Password matching check during registration</li>
+                            <li>Secure Password hashing with <strong>pbkdf2:sha256</strong></li>
+                        </ul>
+                    </li>
+                    <li>User Authentication
+                        <ul>
+                            <li><strong>Flask-login</strong> used to handle sessions</li>
+                            <li>Route protection using <strong>@login_required</strong> decorator</li>
+                        </ul>
+                    </li>
+                    <li>Session Handling
+                        <ul>
+                            <li>Persistent session even after closing the browser (optional).</li>
+                        </ul>
+                    </li>
+                    <li>Events Handling
+                        <ul>
+                            <li>Each user can create and visualize their own events</li>
+                            <li>When you're seeing your events, you can mark them as done</li>
+                            <li>After your mark them as done, you can choose to remove them from the list</li>
+                        </ul>
+                    </li>
+                    <li>Database interaction
+                        <ul>
+                            <li><strong>SQLAlchemy</strong> used to manage users and events</li>
+                            <li>one-to-many relationship between users and events</li>
+                        </ul>
+                    </li>
+                    <li>UI
+                        <ul>
+                            <li><strong>Bootstrap</strong> used for Responsive Design</li>
+                            <li><strong>Flask-WTF</strong> used for HTML Modules</li>
+                        </ul>
+                    </li>
+                    <li>Security
+                        <ul>
+                            <li>CSRF token used against CSRF Attacks</li>
+                        </ul>
+                    </li>
+                </ol>
+            </section>
+            <section id="how_it_works" class="mb-5">
+                <h1>How can I use this app</h1>
+                <p>Let me guide you into a step-by-step guide</p>
+                <ol class="norm">
+                    <li>Register using the Sign Up button Above</li>
+                    <li>Log in into the created account</li>
+                    <li>Go to the "Tasklist" link</li>
+                    <li>Add an event from now on, give it a name and a description and click Add</li>
+                    <li>Now you can navigate through the dates using the timeline and see your events!</li>
+                    <li>You can click on your username whenever you want to go back to the profile page</li>
+                </ol>
+            </section>
+            <section id="finalities" class="mb-5">
+                <h1>How this project is born</h1>
+                <p>This project was born to respond to the need to create an intuitive and functional web platform that allows users to [describe the main functionality, for example "manage their daily tasks efficiently"]. The idea came from observing how often people find themselves having to use multiple different tools to organize their work and personal lives. With Flask Tasklist, I wanted to create a single solution that brought together all these features in one simple and intuitive interface.</p>
+          
+                <p>The project aims to demonstrate my skills as a web developer, from user interface design to backend programming. When developing the application, I wanted to ensure that it was not only functional, but also easy to use and accessible to all users, regardless of their level of technological expertise.</p>
+          
+                <p>Furthermore, I paid particular attention to data security and application performance, using modern techniques and best practices in the field of web development. This project represents a concrete example of my ability to analyze a problem, design a solution and implement it effectively using the most suitable technologies.</p>
+            </section>
+        </div>
+        
+    {% endblock %}
